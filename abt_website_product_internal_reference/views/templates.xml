@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="product_variants_reference" inherit_id="website_sale.product" name="Product">
+        <xpath expr="//div[@id='product_details']/h1" position="after">
+            <div class="box">Internal Reference:- <span id="product_internal_reference"/></div>
+        </xpath>
+    </template>
+</odoo>
