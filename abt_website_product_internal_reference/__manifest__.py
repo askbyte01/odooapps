@@ -7,7 +7,7 @@
     "summary"     : """Website Product Internal Reference""",
     "description" : """  """,
     "version"     : "16.0.1.0",
-    "price"       : "1.0",
+    "price"       : "11.0",
     "currency"    : "USD",
     "depends"     : ["website_sale","stock"],
     "data"        : [

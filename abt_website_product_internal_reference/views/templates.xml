@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="product_variants_reference" inherit_id="website_sale.product" name="Product">
+    <template id="inherited_product" inherit_id="website_sale.product" name="Product">
         <xpath expr="//div[@id='product_details']/h1" position="after">
-            <div class="box">Internal Reference:- <span id="product_internal_reference"/></div>
+            <t t-value="request.env['ir.config_parameter'].sudo().get_param('abt_website_product_internal_reference.internal_reference_font_size')" t-set="font_size" />
+            <t t-value="request.env['ir.config_parameter'].sudo().get_param('abt_website_product_internal_reference.internal_reference_font_color')" t-set="font_color" />
+            <t t-value="request.env['ir.config_parameter'].sudo().get_param('abt_website_product_internal_reference.is_internal_reference_font_bold')" t-set="font_bold" />
+            <t t-if="font_size  or font_color">
+                <t t-if="font_bold">
+                    <div t-attf-style="font-size:{{ font_size }}px;color:{{ font_color }};" class="box">
+                        <b>Internal Reference:- <span id="product_internal_reference"/></b>
+                    </div>
+                </t>
+                <t t-else="">
+                    <div t-attf-style="font-size:{{ font_size }}px; color:{{ font_color }};" class="box">
+                        Internal Reference:- <span id="product_internal_reference"/>
+                    </div>
+                </t>
+            </t>
         </xpath>
     </template>
 </odoo>
