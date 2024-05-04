@@ -3,7 +3,7 @@
 from odoo import http, api, _
 from odoo.http import request,route
 
-class InternalReference(http.Controller):
+class ProductInternalReference(http.Controller):
 
     @http.route(['/get_product_id'], type='json', methods=['POST'], auth="public", website=True)         
     def get_product_id(self, **post):
