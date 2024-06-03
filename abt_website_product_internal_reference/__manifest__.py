@@ -15,7 +15,7 @@
     "version"     : "17.0.1.0",
     "price"       : "11.0",
     "currency"    : "USD",
-    "depends"     : ["website_sale","stock"],
+    "depends"     : ["base","website_sale"],
     "data"        : [
                       "views/templates.xml",
                       "views/res_config_settings_views.xml"

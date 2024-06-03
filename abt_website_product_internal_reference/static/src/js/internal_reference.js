@@ -7,18 +7,21 @@ import { jsonrpc } from "@web/core/network/rpc_service";
             jsonrpc('/get_product_id',{
                 'product_id' : productId
             }).then(function(data){
-               document.getElementById('product_internal_reference').innerText = data.default_code
-                if(data.product_internal_reference == "True"){
-                    if(data.default_code != " "){
-                        $('.box').show();
+                var productInternalReferenceElem = document.getElementById('product_internal_reference');
+                if (productInternalReferenceElem) {
+                    productInternalReferenceElem.innerText = data.default_code;
+                    if(data.product_internal_reference == "True"){
+                        if(data.default_code != " "){
+                            $('.box').show();
+                        }
+                        else{ 
+                            $('.box').hide();
+                        }
                     }
-                    else{ 
+                    else{
                         $('.box').hide();
                     }
                 }
-                else{
-                    $('.box').hide();
-                }
-            }); 
+            });
          });
     });
