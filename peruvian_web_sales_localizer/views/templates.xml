@@ -78,7 +78,7 @@
                 <t t-if="res_company.country_id.code == 'PE'">
                     <t t-set="partner" t-value="website_sale_order.partner_id" />
                     <div class="w-100" />
-                    <t t-call="l10n_pe_website_sale.partner_info" />
+                    <t t-call="peruvian_web_sales_localizer.partner_info" />
                 </t>
             </t>
         </xpath>
@@ -95,7 +95,7 @@
         </xpath>
         <xpath expr="//select[@name='state_id']/.." position="after">
             <t t-if="res_company.country_id.code == 'PE'">
-                <t t-call="l10n_pe_website_sale.partner_address_info" />
+                <t t-call="peruvian_web_sales_localizer.partner_address_info" />
             </t>
         </xpath>
         <!-- Sets the country code for every country option -->

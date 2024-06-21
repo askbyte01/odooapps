@@ -20,7 +20,7 @@
     ],
     "assets": {
         "web.assets_frontend": [
-            "l10n_pe_website_sale/static/src/js/website_sale.js",
+            "peruvian_web_sales_localizer/static/src/js/website_sale.js",
         ],
     },
     "installable": True,

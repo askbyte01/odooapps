@@ -1,4 +1,4 @@
-odoo.define('l10n_pe_website_sale.website_sale', function (require) {
+odoo.define('peruvian_web_sales_localizer.website_sale', function (require) {
 'use strict';
 
 var core = require('web.core');
