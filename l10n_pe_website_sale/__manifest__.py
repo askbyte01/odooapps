@@ -2,11 +2,13 @@
 {
     "name": "Peruvian eCommerce",
     "countries": ["pe"],
-    "version": "16.0.0.1",
+    "version": "16.0.1.0",
     "summary": "Be able to see Identification Type in ecommerce checkout form.",
     "category": "Accounting/Localizations/Website",
     "author": "AskByte Technolab",
     "license": "LGPL-3",
+    "price": "11.0",
+    "currency": "USD",
     "depends": [
         "website_sale",
         "l10n_pe",
