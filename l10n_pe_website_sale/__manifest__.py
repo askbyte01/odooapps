@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    "name": "Peruvian eCommerce",
+    "name": "Peruvian Web Sales Localizer",
     "countries": ["pe"],
     "version": "16.0.1.0",
     "summary": "Be able to see Identification Type in ecommerce checkout form.",
