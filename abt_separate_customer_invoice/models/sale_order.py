@@ -9,11 +9,9 @@ from odoo.fields import Command
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
-    is_separate_customer_invoice = fields.Boolean(string="Is Separate Customer Invoice?", default=False)
-
     def action_separate_customer_invoice(self):
         action = self.env["ir.actions.act_window"]._for_xml_id("sale.action_view_sale_advance_payment_inv")
-        self.is_separate_customer_invoice = True
+        action['context'] = {'default_separate_customer_invoice' : True}
         return action
 
     def _create_invoices(self, grouped=False, final=False, date=None):
@@ -64,7 +62,8 @@ class SaleOrder(models.Model):
 
         #---------------------------------Start--------------------------------#
         for record in self:
-            if record.is_separate_customer_invoice:
+            separate_invoice = self.env.context.get('default_separate_customer_invoice', False)
+            if separate_invoice == True:
                 if not grouped:
                     new_invoice_vals_list = []
                     for invoice_vals in invoice_vals_list:
@@ -85,7 +84,6 @@ class SaleOrder(models.Model):
                         new_invoice_vals_list.append(invoice_vals)
 
                     invoice_vals_list = new_invoice_vals_list
-                    record.is_separate_customer_invoice = False
         #---------------------------------End--------------------------------#
             else:
                 if not grouped:
