@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="inherited_view_sale_order_tree" model="ir.ui.view">
+        <field name="name">sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.sale_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button" position="after">
+                 <button name="%(sale.action_view_sale_advance_payment_inv)d" type="action"
+                     string="Separate Customer Invoice" class="btn-secondary"
+                     context="{'default_separate_customer_invoice': True}"/>        
+            </xpath>
+        </field>   
+    </record>   
+</odoo>
