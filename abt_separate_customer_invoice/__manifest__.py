@@ -11,7 +11,6 @@
     "depends"     : ["sale_management","stock"],
     "data"        : [
         'wizard/sale_make_invoice_advance_views.xml',
-        'views/sale_order_views.xml',
     ],
     "license"     : "LGPL-3",
     "installable" : True,
