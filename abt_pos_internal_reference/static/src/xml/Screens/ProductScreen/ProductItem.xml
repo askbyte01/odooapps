@@ -5,7 +5,7 @@
             <span class="price-tag" style="color: black;">
                 <t t-if="props.product.default_code">
                     [<t t-esc="props.product.default_code" />]
-                </t>    
+                </t>
             </span>
         </xpath>
     </t>
