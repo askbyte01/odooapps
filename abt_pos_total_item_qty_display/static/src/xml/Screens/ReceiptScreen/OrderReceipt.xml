@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="OrderReceiptInherit" t-inherit="point_of_sale.OrderReceipt"
+       t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[contains(text(), 'Total Taxes')]" position="after">
+            <t t-if="env.pos.config.is_total_qty">
+                <div>
+                    <span>Total Qty:</span>
+                    <span style="float:right;">
+                        <t t-esc="get_total_qty()"/>
+                    </span>
+                </div>
+            </t>
+            <t t-if="env.pos.config.is_total_items">
+                <div>
+                    <span>Total Items:</span>
+                    <span style="float:right;">
+                        <t t-esc="get_total_item()"/>
+                    </span>
+                </div>
+            </t>
+        </xpath>
+    </t>
+</templates>

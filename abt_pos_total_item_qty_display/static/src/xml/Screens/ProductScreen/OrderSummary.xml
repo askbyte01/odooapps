@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="OrderSummaryInherit" t-inherit="point_of_sale.OrderSummary"
+       t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[@class='entry total']" position="inside"><br/>
+            <t t-if="env.pos.config.is_total_qty">
+                <div class="entry total">
+                    <span class="badge">Total Qty: </span>
+                    <span class="value">
+                        <t t-esc="get_total_qty()" />
+                    </span>
+                </div>
+            </t>
+            <t t-if="env.pos.config.is_total_items">
+                <div class="entry total">
+                    <span class="badge">Total Items: </span>
+                    <span class="value">
+                        <t t-esc="get_total_item()" />
+                    </span>
+                </div>
+            </t>
+        </xpath>
+    </t>
+</templates>
