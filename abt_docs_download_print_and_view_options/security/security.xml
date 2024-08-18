@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.module.category" id="report_operations_category">
+            <field name="name">Report Operations</field>
+        </record>
+
+        <record model="ir.module.category" id="handling_report_option">
+            <field name="name">Handling Options</field>
+            <field name="parent_id" ref="report_operations_category"/>
+            <field name="description">Report Operations: Choose to download, view, or print the report.</field>
+        </record>
+
+        <record model="res.groups" id="group_open_pdf">
+            <field name="category_id" ref="handling_report_option"/>
+            <field name="name">View the Report</field>
+            <field name="comment">View the Report: Open and read the report directly on your screen.</field>
+        </record>
+
+        <record model="res.groups" id="group_download_pdf">
+            <field name="category_id" ref="handling_report_option"/>
+            <field name="name">Save a Copy of the Report</field>
+            <field name="comment">Save a Copy of the Report: Download and store the report file on your device.</field>
+            <field name="implied_ids" eval="[(4, ref('group_open_pdf'))]"/>
+        </record>
+
+        <record model="res.groups" id="group_print_pdf">
+            <field name="category_id" ref="handling_report_option"/>
+            <field name="name">Print a Copy of the Report</field>
+            <field name="comment">Print a Copy of the Report: Generate a physical printout of the report for hardcopy use.</field>
+            <field name="implied_ids" eval="[(4, ref('group_download_pdf'))]"/>
+        </record>
+
+    </data>
+
+</odoo>
