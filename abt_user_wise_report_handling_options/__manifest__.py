@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    "name"        : "User-Wise Report Download, Open, and Print Options",
+    "name"        : "User Wise Report Download, Open, and Print Options",
     "author"      : "AskByte Technolab",
     "category"    : "Technical",
     "summary"     : """This module enables PDF management with options to download, view online, or print.""",
