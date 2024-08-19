@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    "name"        : "Document Download, Print, and View Options",
+    "name"        : "User-Wise Report Download, Open, and Print Options",
     "author"      : "AskByte Technolab",
     "category"    : "Technical",
     "summary"     : """This module enables PDF management with options to download, view online, or print.""",
@@ -17,7 +17,7 @@
     ],
     'assets': {
         'web.assets_backend': [
-            'abt_docs_download_print_and_view_options/static/src/webclient/actions/action_service.js'
+            'abt_user_wise_report_handling_options/static/src/webclient/actions/action_service.js'
         ],
     },
     "license"     : "LGPL-3",

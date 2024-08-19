@@ -116,9 +116,9 @@ registry
             async function handlePdfActions() {
                 try {
                     const [downloadGroup, printGroup, openGroup] = await Promise.all([
-                        session.user_has_group('abt_docs_download_print_and_view_options.group_download_pdf'),
-                        session.user_has_group('abt_docs_download_print_and_view_options.group_print_pdf'),
-                        session.user_has_group('abt_docs_download_print_and_view_options.group_open_pdf')
+                        session.user_has_group('abt_user_wise_report_handling_options.group_download_pdf'),
+                        session.user_has_group('abt_user_wise_report_handling_options.group_print_pdf'),
+                        session.user_has_group('abt_user_wise_report_handling_options.group_open_pdf')
                     ]);
 
                     if (downloadGroup || printGroup) {
