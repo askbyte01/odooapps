@@ -9,8 +9,6 @@
         to see and use the "Update Quantity" button; otherwise, it is hidden.
     """,
     "category": "Inventory",
-    "price": "3.0",
-    "currency": "USD",
     "version": "16.0.1.0",
     "depends": ["stock"],
     "data": [
