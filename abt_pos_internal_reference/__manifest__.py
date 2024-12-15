@@ -16,7 +16,7 @@
             'abt_pos_internal_reference/static/src/app/models/pos_order_line.js'
         ],
     },
-    'images': ['static/description/thumbnail.png'],
+    'images': ['static/description/thumbnail.jpg'],
     'license': 'LGPL-3',
     'application': True,
     'auto_install': False,
