@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Description Column</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .oe_container {
+            padding: 20px;
+            background-color: #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .oe_slogan {
+            color: #007bff; /* Blue */
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .oe_row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .oe_picture {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .oe_screenshot img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .oe_spaced {
+            margin-top: 20px;
+        }
+        .oe_demo {
+            margin: 10px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .overview {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .screenshots {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .contact {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .header-text {
+            color: #212529;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        .description-text {
+            color: #202e3b;
+            font-size: 1.5rem;
+        }
+        .contact-text {
+            color: #212529;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Introduction Section -->
+    <section class="oe_container">
+        <div class="oe_row">
+            <h2 class="oe_slogan">Product Description Column</h2>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="oe_container overview">
+        <div class="oe_row">
+            <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
+                <h2 class="header-text">Overview</h2>
+            </div>
+            <ul style="list-style: none; padding: 0;">
+                <li class="description-text">Askbye Technoleb introduces the much-requested feature of separating product and description fields in Odoo v18, which was previously available.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="oe_container screenshots">
+        <div class="oe_row oe_spaced">
+            <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
+                <h3 class="header-text">Functionality Screenshots</h3>
+            </div>
+            <ul style="list-style: none; padding: 0;">
+                <li class="description-text">Sales order form view before installing this module.</li>
+                <div class="oe_span12">
+                    <div class="oe_demo oe_picture oe_screenshot">
+                        <img src="img1_1.png" alt="Sales Order Before">
+                    </div>
+                </div>
+                <li class="description-text">Sales order form view after installing this module.</li>
+                <div class="oe_span12">
+                    <div class="oe_demo oe_picture oe_screenshot">
+                        <img src="img_1.png" alt="Sales Order After">
+                    </div>
+                </div>
+                <li class="description-text">Invoice form view before installing this module.</li>
+                <div class="oe_span12">
+                    <div class="oe_demo oe_picture oe_screenshot">
+                        <img src="img_2_1.png" alt="Invoice Before">
+                    </div>
+                </div>
+                <li class="description-text">Invoice form view after installing this module.</li>
+                <div class="oe_span12">
+                    <div class="oe_demo oe_picture oe_screenshot">
+                        <img src="img_2.png" alt="Invoice After">
+                    </div>
+                </div>
+                <li class="description-text">Purchase order form view before installing this module.</li>
+                <div class="oe_span12">
+                    <div class="oe_demo oe_picture oe_screenshot">
+                        <img src="img_3_1.png" alt="Purchase Order Before">
+                    </div>
+                </div>
+                <li class="description-text">Purchase order form view after installing this module.</li>
+                <div class="oe_span12">
+                    <div class="oe_demo oe_picture oe_screenshot">
+                        <img src="img_3.png" alt="Purchase Order After">
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="oe_container contact">
+        <div class="row">
+            <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
+                <h2 class="header-text">Is there anything I can assist you with?</h2>
+            </div>
+        </div>
+        <ul style="list-style: none; padding: 0;">
+            <li class="contact-text">For any inquiries, assistance, or suggestions for new features, please feel free to reach out to us via email. <b style="color: #007bff;">askbytetechnolab@gmail.com</b></li>
+        </ul>
+    </section>
+
+</body>
+</html>
