@@ -1,0 +1,129 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7; /* Light gray background */
+        }
+        .oe_container {
+            padding: 20px;
+            background-color: #fff; /* White container background */
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .oe_row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .oe_slogan {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #3498db; /* Blue for title */
+        }
+        .oe_picture {
+            margin: 20px 0;
+        }
+        .oe_picture img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .oe_span12 {
+            display: flex;
+            justify-content: center;
+        }
+        .oe_demo {
+            width: 80%;
+            max-width: 600px;
+        }
+        .list-item {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #2ecc71; /* Green for list items */
+        }
+        .contact-section {
+            background-color: #9b59b6; /* Purple for contact section */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .contact-email {
+            font-size: 1.5rem;
+        }
+        h2 {
+            color: #e74c3c; /* Red for headings */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Overview Section -->
+    <section class="oe_container">
+        <div class="oe_row">
+            <h2 class="oe_slogan">Email Reply to Controller</h2>
+        </div>
+    </section>
+    <section class="oe_container">
+        <div class="oe_row">
+            <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
+                <h2>Overview</h2>
+            </div>
+            <ul>
+                <li class="list-item">This feature allows users to manage email replies effectively by configuring the "Reply-To" field in email templates.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="oe_container">
+        <div class="oe_row">
+            <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
+                <h2>How It Works</h2>
+            </div>
+        </div>
+        <div class="oe_row oe_spaced">
+            <ul>
+                <li class="list-item">Navigate to Email Templates in Odoo.</li>
+                <li class="list-item">Add an email address (or placeholder) in the "Reply-To" field.</li>
+            </ul>
+            <div class="oe_span12">
+                <div class="oe_demo oe_picture oe_screenshot">               
+                    <img src="img_1.png" alt="Step 1 Screenshot">
+                </div>
+            </div>
+            <ul>
+                <li class="list-item">When sending an email using a configured template, the "Reply-To" address is automatically set in the email, ensuring seamless reply routing.</li>
+            </ul>
+            <div class="oe_span12">
+                <div class="oe_demo oe_picture oe_screenshot">               
+                    <img src="img_2.png" alt="Step 2 Screenshot">
+                </div>
+            </div>
+            <ul>
+                <li class="list-item">The system automatically applies the "Reply-To" value from the template to the email.</li>
+            </ul>
+            <div class="oe_span12">
+                <div class="oe_demo oe_picture oe_screenshot">               
+                    <img src="img_3.png" alt="Step 3 Screenshot">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br/><br/>
+    <section class="container contact-section">
+        <div class="row">
+            <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
+                <h2>Is there anything I can assist you with?</h2>
+            </div>
+        </div>
+        <p class="contact-email">For any inquiries, assistance, or suggestions for new features, please feel free to reach out to us via email: <b>askbytetechnolab@gmail.com</b></p>
+    </section>
+    <br/><br/>
+
+</body>
+</html>
