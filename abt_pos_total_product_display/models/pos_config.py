@@ -15,5 +15,5 @@ class PosConfig(models.Model):
     )
     your_label = fields.Char(
         string="Label", translate=True, 
-        help="A user-friendly label for the color, translated into the user"s language."
+        help="A user-friendly label for the color, translated into the user's language."
     )
