@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Description Column</title>
+    <meta name="description" content="Separate Product and Description Fields in Odoo v18 to improve document clarity and organization.">
+    <meta name="keywords" content="Odoo v18, Product Description, Separate Fields, Odoo Modules, Sales Order, Purchase Order">
+    <meta name="author" content="Askbye Technoleb">
+    <title>Product Description Separation in Odoo v18</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <style>
         body {
@@ -72,11 +75,28 @@
         }
         .description-text {
             color: #202e3b;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            line-height: 1.6;
         }
         .contact-text {
             color: #212529;
             font-size: 1.5rem;
+        }
+        .point-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .point-list li {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            padding-left: 20px;
+            position: relative;
+        }
+        .point-list li:before {
+            content: "•";
+            color: #007bff; /* Blue */
+            position: absolute;
+            left: 0;
         }
     </style>
 </head>
@@ -85,7 +105,7 @@
     <!-- Introduction Section -->
     <section class="oe_container">
         <div class="oe_row">
-            <h2 class="oe_slogan">Separate Product Description Column</h2>
+            <h1 class="oe_slogan">Separate Product Description Column in Odoo v18</h1>
         </div>
     </section>
 
@@ -95,8 +115,11 @@
             <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
                 <h2 class="header-text">Overview</h2>
             </div>
-            <ul style="list-style: none; padding: 0;">
-                <li class="description-text">Askbye Technoleb introduces the much-requested feature of separating product and description fields in Odoo v18, which was previously available.</li>
+            <ul class="point-list">
+                <li class="description-text">Askbye Technoleb introduces the much-requested feature of separating product and description fields in Odoo v18, which was previously available in older versions of the system. This feature allows users to have distinct fields for product names and detailed descriptions, improving clarity and efficiency in various document views such as sales orders, invoices, and purchase orders.</li>
+                <li class="description-text">The separation of product and description fields enhances user experience by making it easier to differentiate between product attributes and their detailed descriptions, ensuring a smoother workflow in Odoo. This feature is designed to simplify the process of generating and viewing documents by providing better organization and flexibility.</li>
+                <li class="description-text">With this improvement, businesses can now provide more accurate and descriptive product details, which can be crucial for customer-facing documents like invoices and sales orders. It also makes it easier for sales teams and accounting staff to process orders and maintain accurate records.</li>
+                <li class="description-text">This feature not only improves the interface but also enhances backend functionality, enabling more efficient customization and integrations with other systems. Whether you're working on quotes, orders, or invoices, the separation of product names and descriptions ensures that each field serves its unique purpose, making the entire process more streamlined and efficient.</li>
             </ul>
         </div>
     </section>
@@ -107,41 +130,53 @@
             <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
                 <h3 class="header-text">Functionality Screenshots</h3>
             </div>
-            <ul style="list-style: none; padding: 0;">
-                <li class="description-text">Sales order form view before installing this module.</li>
+            <ul class="point-list">
+                <li class="description-text">
+                    <strong>Sales Order Form View (Before):</strong> The product name and description are combined into one field, which makes the document harder to read.
+                </li>
                 <div class="oe_span12">
                     <div class="oe_demo oe_picture oe_screenshot">
-                        <img src="img1_1.png" alt="Sales Order Before">
+                        <img src="img1_1.png" alt="Sales Order Before" />
                     </div>
                 </div>
-                <li class="description-text">Sales order form view after installing this module.</li>
+                <li class="description-text">
+                    <strong>Sales Order Form View (After):</strong> Product name and description are separated, improving readability and clarity.
+                </li>
                 <div class="oe_span12">
                     <div class="oe_demo oe_picture oe_screenshot">
-                        <img src="img_1.png" alt="Sales Order After">
+                        <img src="img_1.png" alt="Sales Order After" />
                     </div>
                 </div>
-                <li class="description-text">Invoice form view before installing this module.</li>
+                <li class="description-text">
+                    <strong>Invoice Form View (Before):</strong> The combined field for product name and description makes complex invoices harder to process.
+                </li>
                 <div class="oe_span12">
                     <div class="oe_demo oe_picture oe_screenshot">
-                        <img src="img_2_1.png" alt="Invoice Before">
+                        <img src="img_2_1.png" alt="Invoice Before" />
                     </div>
                 </div>
-                <li class="description-text">Invoice form view after installing this module.</li>
+                <li class="description-text">
+                    <strong>Invoice Form View (After):</strong> Separated fields provide clarity and improved layout for invoices with multiple items.
+                </li>
                 <div class="oe_span12">
                     <div class="oe_demo oe_picture oe_screenshot">
-                        <img src="img_2.png" alt="Invoice After">
+                        <img src="img_2.png" alt="Invoice After" />
                     </div>
                 </div>
-                <li class="description-text">Purchase order form view before installing this module.</li>
+                <li class="description-text">
+                    <strong>Purchase Order Form View (Before):</strong> Merged fields make tracking purchase order items difficult.
+                </li>
                 <div class="oe_span12">
                     <div class="oe_demo oe_picture oe_screenshot">
-                        <img src="img_3_1.png" alt="Purchase Order Before">
+                        <img src="img_3_1.png" alt="Purchase Order Before" />
                     </div>
                 </div>
-                <li class="description-text">Purchase order form view after installing this module.</li>
+                <li class="description-text">
+                    <strong>Purchase Order Form View (After):</strong> Fields are now clearly separated, allowing for easy tracking and management of purchase orders.
+                </li>
                 <div class="oe_span12">
                     <div class="oe_demo oe_picture oe_screenshot">
-                        <img src="img_3.png" alt="Purchase Order After">
+                        <img src="img_3.png" alt="Purchase Order After" />
                     </div>
                 </div>
             </ul>
@@ -155,8 +190,16 @@
                 <h2 class="header-text">Is there anything I can assist you with?</h2>
             </div>
         </div>
-        <ul style="list-style: none; padding: 0;">
-            <li class="contact-text">For any inquiries, assistance, or suggestions for new features, please feel free to reach out to us via email. <b style="color: #007bff;">askbytetechnolab@gmail.com</b></li>
+        <ul class="point-list">
+            <li class="contact-text">
+                For any inquiries or assistance, feel free to contact us via email: <b style="color: #007bff;">askbytetechnolab@gmail.com</b>
+            </li>
+            <li class="contact-text">
+                Our support team is available to guide you through installation, usage, and customization for the module.
+            </li>
+            <li class="contact-text">
+                Let us help you optimize your Odoo v18 experience and make your workflows more efficient.
+            </li>
         </ul>
     </section>
 
