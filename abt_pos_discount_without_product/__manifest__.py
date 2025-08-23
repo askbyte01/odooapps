@@ -31,6 +31,7 @@ Perfect for businesses that want simple, clear POS receipts without discount pro
             "abt_pos_discount_without_product/static/src/js/DiscountButtonExt.js",
         ],
     },
+    "images": ["static/description/thumbnail.png"],
     "license": "LGPL-3",
     "installable": True,
     "application": False,
