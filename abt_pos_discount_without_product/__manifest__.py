@@ -3,6 +3,8 @@
     "name": "POS Discount Without Discount Product",
     "version": "16.0.1.0.1",
     "category": "Point of Sale",
+    "price": "7.0",
+    "currency": "USD",
     "summary": "Apply discounts in POS without needing a discount product line.",
     "description": """
 POS Discount Without Discount Product
