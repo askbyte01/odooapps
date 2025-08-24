@@ -12,6 +12,7 @@
     "data"        : [
         'wizard/sale_make_invoice_advance_views.xml',
     ],
+    "images"      : ["static/description/thumbnail.png"],
     "license"     : "LGPL-3",
     "installable" : True,
     "application" : True,

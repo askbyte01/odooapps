@@ -16,6 +16,7 @@
         "views/product_views.xml"
     ],
     "license": "LGPL-3",
+    "images": ["static/description/thumbnail.png"],
     "installable": True,
     "application": True,
     "auto_install": False,

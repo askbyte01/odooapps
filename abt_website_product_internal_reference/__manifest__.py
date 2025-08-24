@@ -32,6 +32,7 @@
             'abt_website_product_internal_reference/static/src/js/internal_reference.js',
         ],
     },
+    "images"      : ["static/description/thumbnail.png"],
     "license"     : "OPL-1",
     "installable" : True,
     "application" : True,

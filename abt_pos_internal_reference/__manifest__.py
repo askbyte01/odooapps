@@ -18,6 +18,7 @@
             'abt_pos_internal_reference/static/src/xml/Screens/ProductScreen/Orderline.xml'
         ],
     },
+    'images': ['static/description/thumbnail.png'],
     'license': 'LGPL-3',
     "installable" : True,
     "application" : True,

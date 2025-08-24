@@ -21,6 +21,7 @@
             "abt_pos_total_item_qty_display/static/src/xml/**/*",
         ],
     },
+    "images": ["static/description/thumbnail.png"],
     "installable": True,
     "application": True,
     "auto_install": False,

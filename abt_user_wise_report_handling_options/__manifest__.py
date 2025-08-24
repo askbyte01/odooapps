@@ -20,6 +20,7 @@
             'abt_user_wise_report_handling_options/static/src/webclient/actions/action_service.js'
         ],
     },
+    "images"      : ["static/description/thumbnail.png"],
     "license"     : "LGPL-3",
     "installable" : True,
     "application" : True,

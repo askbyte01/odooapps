@@ -23,6 +23,7 @@
             "peruvian_web_sales_localizer/static/src/js/website_sale.js",
         ],
     },
+    "images": ["static/description/thumbnail.png"],
     "installable": True,
     "auto_install": True,
 }
