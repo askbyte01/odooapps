@@ -18,6 +18,7 @@
             "abt_pos_product_filter_by_category_and_search/static/src/app/screens/product_screen.js",
         ],
     },
+    "images": ["static/description/thumbnail.png"],
     "license": "LGPL-3",
     "application": True,
     "auto_install": False,

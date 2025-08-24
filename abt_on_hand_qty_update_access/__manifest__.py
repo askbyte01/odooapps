@@ -15,6 +15,7 @@
         "security/group_on_hand_qty_update_access.xml",
         "views/product_views.xml"
     ],
+    "images": ["static/description/thumbnail.png"],
     "license": "LGPL-3",
     "installable": True,
     "application": True,

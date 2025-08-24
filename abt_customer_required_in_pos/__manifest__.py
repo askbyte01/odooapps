@@ -13,6 +13,7 @@
             "abt_customer_required_in_pos/static/src/app/screens/payment_screen/payment_screen.xml"
         ],
     }, 
+    "images": ["static/description/thumbnail.png"],
     "license": "LGPL-3",
     "application": True,
     "auto_install": False,

@@ -8,6 +8,7 @@
         Email Reply to Controller.
     """,
     "category": "Technical",
+    "images": ["static/description/thumbnail.png"],
     "version": "18.0.1.0",
     "depends": ["mail"],
     "license": "LGPL-3",

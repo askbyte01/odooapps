@@ -15,6 +15,7 @@
             "abt_pos_total_product_display/static/src/app/screens/product_screen.xml",
         ],
     },
+    "images": ["static/description/thumbnail.png"],
     "license": "LGPL-3",
     "application": True,
     "auto_install": False,

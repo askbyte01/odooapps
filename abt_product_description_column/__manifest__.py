@@ -16,6 +16,7 @@
             "abt_product_description_column/static/src/components/product_label_section_and_note_field/product_label_section_and_note_field.js"
         ],
     },
+    "images": ["static/description/thumbnail.png"],
     "license": "LGPL-3",
     "application": True,
     "auto_install": False,
