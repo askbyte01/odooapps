@@ -6,132 +6,406 @@
     <meta name="description" content="Odoo v18 POS Module: Mandatory Customer Selection Before Payment">
     <meta name="keywords" content="Odoo v18, POS Module, Mandatory Customer Selection, Odoo App Store">
     <title>Odoo POS Mandatory Customer Selection</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
         }
+
         .oe_container {
-            margin: 20px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 40px 20px;
         }
-        .oe_row {
-            padding: 10px;
+
+        .header-section {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            padding: 50px 30px;
+            margin-bottom: 40px;
         }
-        .oe_slogan {
-            color: #007bff;
-        }
-        h3 {
-            color: #212529;
+
+        .header-section h2 {
+            font-weight: 700;
+            color: #1e3a8a;
+            font-size: 2.5rem;
             margin-bottom: 10px;
         }
-        li {
-            font-size: 1.5rem;
-            color: #202e3b;
+
+        .header-section p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .section-card h3 {
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .section-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .section-card li {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .section-card li:before {
+            content: "\f058"; /* Font Awesome checkmark icon */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #22c55e;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .screenshot-container {
+            text-align: center;
+            margin-top: 30px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+        }
+
+        .screenshot-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .contact-section h2 {
+            font-weight: 700;
+            color: #1e3a8a;
             margin-bottom: 20px;
         }
-        .oe_demo {
+
+        .contact-section p {
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        /* Related Modules Carousel */
+        .related-modules-title {
+            color: #333;
             text-align: center;
-            margin-top: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            text-transform: uppercase;
+            padding-bottom: 40px;
         }
-        img {
-            max-width: 100%;
+
+        .module-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+
+        .module-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .module-link {
+            color: #333;
+            text-decoration: none;
+            display: block;
+        }
+
+        .module-image {
+            width: 100%;
             height: auto;
-            border-radius: 10px;
+            display: block;
+            border-bottom: 1px solid #eee;
         }
-        @media only screen and (max-width: 768px) {
-            .oe_container {
-                margin: 10px;
-                padding: 10px;
-            }
-            h2 {
-                font-size: 1.5rem;
-            }
-            h3 {
-                font-size: 1.2rem;
-            }
-            li {
-                font-size: 1.2rem;
-            }
+
+        .module-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .module-title {
+            font-weight: 600;
+            margin-bottom: 0;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .owl-carousel .owl-nav {
+            position: absolute;
+            top: 45%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-45%);
+            z-index: 10;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev,
+        .owl-carousel .owl-nav button.owl-next {
+            position: absolute;
+            font-size: 1.5rem;
+            background-color: #f8f9fa;
+            color: #333 !important;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            outline: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev:hover,
+        .owl-carousel .owl-nav button.owl-next:hover {
+            background-color: #e9ecef;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .owl-carousel .owl-nav button.owl-prev {
+            right: -20px;
+        }
+
+        .owl-carousel .owl-nav button.owl-next {
+            left: -20px;
         }
     </style>
 </head>
 <body>
-
-    <section class="oe_container">
-        <div class="oe_row">
-            <h2 class="oe_slogan">Customer Required in POS</h2>
-            <p style="font-size: 1.2rem;">Enhance your Odoo v18 Point of Sale experience with our custom module that requires customer selection before payment.</p>
-        </div>
-    </section>
-
-    <section class="oe_container">
-        <div class="oe_row oe_spaced">
-            <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
-                <h3>Overview</h3>
-            </div>
-            <li>This custom module for Odoo v18 enhances the Point of Sale (POS) system by making it compulsory to select a customer before proceeding to the payment screen.</li>
-        </div>
-    </section>
-
-    <section class="oe_container">
-        <div class="oe_row oe_spaced">
-            <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
-                <h3>Mandatory Customer Selection</h3>
-            </div>
-            <li>Users must select a customer before they can proceed to payment.</li>
-            <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
-                <h3>Pop-up Notification</h3>
-            </div>
-            <li>If no customer is selected, a pop-up will prompt the user to choose one.</li>
-            <div class="oe_span12">
-                <div class="oe_demo oe_picture oe_screenshot">
-                    <img src="img_1.png" alt="Customer Selection Screen">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="oe_container">
-        <div class="oe_row oe_spaced">
-            <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
-                <h3>Seamless Redirection</h3>
-            </div>
-            <li>After selecting a customer, the system automatically redirects to the payment screen for efficient processing.</li>
-            <div class="oe_span12">
-                <div class="oe_demo oe_picture oe_screenshot">
-                    <img src="img_2.png" alt="Payment Screen Redirection">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="oe_container">
-        <div class="oe_row oe_spaced">
-            <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
-                <h3>No Customer Changes on Payment Screen</h3>
-            </div>
-            <li>Once a customer is selected, they cannot be changed from the payment screen, maintaining data consistency.</li>
-            <div class="oe_span12">
-                <div class="oe_demo oe_picture oe_screenshot">
-                    <img src="img_3.png" alt="Payment Screen Lock">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
+    <div class="container oe_container">
         <div class="row">
-            <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center">
-                <h2>Need Assistance?</h2>
+            <div class="col-12">
+                <div class="header-section">
+                    <span class="badge bg-info text-light" style="font-size: 0.9rem; padding: 6px 15px; border-radius: 20px; margin-bottom: 15px;">
+                        Odoo v18
+                    </span>
+                    <h2>Customer Required in POS</h2>
+                    <p>Enhance your Odoo v18 Point of Sale experience with our custom module that requires customer selection before payment. This ensures accurate sales tracking and customer data integrity.</p>
+                </div>
             </div>
-            <li>For inquiries, assistance, or suggestions for new features, please contact us at <b>askbytetechnolab@gmail.com</b>.</li>
         </div>
-    </section>
 
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-card">
+                    <h3>Overview</h3>
+                    <ul>
+                        <li>This custom module for Odoo v18 enhances the Point of Sale (POS) system by making it compulsory to select a customer before proceeding to the payment screen.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="section-card">
+                    <h3>Mandatory Customer Selection</h3>
+                    <ul>
+                        <li>Users must select a customer before they can proceed to payment.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="section-card">
+                    <h3>Pop-up Notification</h3>
+                    <ul>
+                        <li>If no customer is selected, a pop-up will prompt the user to choose one.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="screenshot-container">
+                    <img src="img_1.png" alt="Pop-up notification for mandatory customer selection" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-card">
+                    <h3>Seamless Redirection</h3>
+                    <ul>
+                        <li>After selecting a customer, the system automatically redirects to the payment screen for efficient processing.</li>
+                    </ul>
+                    <div class="screenshot-container">
+                        <img src="img_2.png" alt="Automatic redirection to the payment screen" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-card">
+                    <h3>No Customer Changes on Payment Screen</h3>
+                    <ul>
+                        <li>Once a customer is selected, they cannot be changed from the payment screen, maintaining data consistency.</li>
+                    </ul>
+                    <div class="screenshot-container">
+                        <img src="img_3.png" alt="Payment screen with a locked customer field" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-12 text-center my-4">
+                <h3 class="related-modules-title">
+                    Related Modules
+                </h3>
+            </div>
+        </div>
+
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="module-card">
+                    <a href="https://apps.odoo.com/apps/modules/18.0/abt_pos_internal_reference" class="module-link">
+                        <div>
+                            <img src="./assets/modules/1.gif" alt="POS Internal References" class="module-image">
+                        </div>
+                        <div class="module-info">
+                            <p class="module-title">POS Internal References</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="module-card">
+                    <a href="https://apps.odoo.com/apps/modules/18.0/abt_pos_product_filter_search_by_category" class="module-link">
+                        <div>
+                            <img src="./assets/modules/2.png" alt="POS Product Filter & Search by Category" class="module-image">
+                        </div>
+                        <div class="module-info">
+                            <p class="module-title">POS Product Filter & Search by Category</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="module-card">
+                    <a href="https://apps.odoo.com/apps/modules/18.0/abt_pos_total_product_display" class="module-link">
+                        <div>
+                            <img src="./assets/modules/3.png" alt="POS Total Product Display" class="module-image">
+                        </div>
+                        <div class="module-info">
+                            <p class="module-title">POS Total Product Display</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="module-card">
+                    <a href="https://apps.odoo.com/apps/modules/16.0/abt_pos_total_item_qty_display" class="module-link">
+                        <div>
+                            <img src="./assets/modules/4.png" alt="POS Total Quantity & Items Display" class="module-image">
+                        </div>
+                        <div class="module-info">
+                            <p class="module-title">POS Total Quantity & Items Display</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="module-card">
+                    <a href="https://apps.odoo.com/apps/modules/16.0/abt_pos_discount_without_product" class="module-link">
+                        <div>
+                            <img src="./assets/modules/5.png" alt="POS Discount Without Discount Product" class="module-image">
+                        </div>
+                        <div class="module-info">
+                            <p class="module-title">POS Discount Without Discount Product</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="contact-section">
+                    <h2>Need Assistance?</h2>
+                    <p>For inquiries, assistance, or suggestions for new features, please contact us at <b>askbytetechnolab@gmail.com</b>. We are here to help!</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            rtl: true,
+            loop: true,
+            margin: 15,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+    </script>
 </body>
 </html>
