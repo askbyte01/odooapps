@@ -29,5 +29,5 @@
     "installable" : True,
     "application" : True,
     "auto_install": False,
-    #"images"      : ["static/description/thumbnail.png"],
+    "images"      : ["static/description/thumbnail.png"],
 }
