@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    "name": "Product Description Column",
+    "name": "Separate Product Description Column",
     "author": "AskByte Technolab",
     "summary": """The column now includes separate product and description fields.""",
     "description": """
