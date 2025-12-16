@@ -4,9 +4,11 @@ import { patch } from "@web/core/utils/patch";
 patch(PosOrderline.prototype, {
 
     get_full_product_name() {
-        if (this.product_id.default_code) {
-            result = result + " " + "[" + this.product_id.default_code + "]"
-        } 
+        let result = this.full_product_name || this.product_id.display_name
+        if (this.product_id.default_code){
+            result = (this.full_product_name || this.product_id.display_name) + " " + "[" + this.product_id.default_code + "]"
+        }
+
         return result
     }
 
