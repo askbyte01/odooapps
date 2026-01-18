@@ -8,7 +8,7 @@
     """,
     "category": "Technical",
     "version": "19.0.1.0",
-    "price": "7.0",
+    "price": "8.0",
     "currency": "USD",
     "depends": ["web"],
     "assets": {
