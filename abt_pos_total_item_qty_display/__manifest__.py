@@ -5,7 +5,7 @@
     "author": "AskByte Technolab",
     "category": "Point of Sale",
     "summary": "POS Total Quantity & Items Display",
-    "license": "AGPL-3",
+    "license": "LGPL-3",
     "description": """
         Total Items and Total Quantity are displayed in the POS module 
         based on the configuration settings for showing these details.
