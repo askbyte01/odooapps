@@ -32,7 +32,7 @@
             'abt_website_product_internal_reference/static/src/js/internal_reference.js',
         ],
     },
-    "license"     : "OPL-1",
+    "license"     : "LGPL-3",
     "installable" : True,
     "application" : True,
     "auto_install": False,
