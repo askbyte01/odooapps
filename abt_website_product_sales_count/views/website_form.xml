@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="website_sale_product_trmplate_inh" inherit_id="website_sale.product" name="dd" priority="4">
+        <xpath expr="//p[@t-field='product.description_sale']" position="after">
+             <div id="sales_info_wrapper">
+                 <b><span id="last_365_day"/> bought</b> in past year
+             </div>
+        </xpath>
+    </template>
+</odoo>
