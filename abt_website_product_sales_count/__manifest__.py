@@ -2,6 +2,7 @@
 
 {
     "name": "Website Product Sales Count",
+    "author": "AskByte Technolab",
     "summary": "Displays the dynamically formatted sales count on the website product page.",
     "description": """
         - Adds a boolean field to product to enable/disable the feature.
